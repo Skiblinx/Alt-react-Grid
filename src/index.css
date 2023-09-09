@@ -1,0 +1,75 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* write neccessary css for the grid- simple box style, use the css reset from the star project */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* .grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+} */
+
+/* .row {
+  display: flex;
+  gap: 8px;
+  /* width: 300px;
+  height: 100px; */
+  background-color: red;
+} */
+
+/* .cell{
+  background-color: blue;
+  width: 150px;
+  height: 150px;
+  border: 2px solid green;
+  border-radius: 5px;
+} */
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px; 
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); 
+}
+
+
+.cell {
+  background-color: lightgray; 
+  border: 1px solid gray; 
+  border-radius: 3px;
+  padding: 30px;
+  text-align: center; 
+  margin: 3px;
+
+}
